@@ -24,7 +24,7 @@ module.exports = function( grunt ) {
       js: {
         files: {
           'src/js/scripts.min.js': [
-            'src/components/jquery/dist/jquery.min.js',
+            //'src/components/jquery/dist/jquery.min.js',
             'src/assets/js/scripts.js'
           ]
         }

@@ -1,4 +1,3 @@
-![Falkor](https://github.com/aaronlsilber/falkor/blob/master/assets/img/screenshot.png)
 Falkor theme for Drupal 7
 =========================
 
@@ -29,13 +28,14 @@ Drupal Function Overrides
 Build Processes
 -------------------------
 
+* Grunt
 * Bower
+* SASS
 
 
 3rd Party Scripts
 -------------------------
 
-* jQuery
 * Modernizr
 
 
