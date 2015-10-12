@@ -5,7 +5,7 @@
     <?php print $user_picture; ?>
 
     <?php print render($title_prefix); ?>
-      <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+      <h1<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h1>
     <?php print render($title_suffix); ?>
 
     <?php if ($display_submitted): ?>

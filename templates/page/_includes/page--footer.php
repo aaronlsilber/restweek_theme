@@ -1,4 +1,3 @@
-
 <footer class="page__footer">
 	<nav>
 		<?php 
@@ -7,5 +6,5 @@
 		?>
 	</nav>
 
-  <?php if (!empty($page['footer'])) print render($page['footer']) ?>
+	<?php if (!empty($page['footer'])) print render($page['footer']) ?>
 </footer>

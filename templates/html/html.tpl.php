@@ -8,9 +8,7 @@
     <title><?php print $head_title; ?></title>
 
     <?php print $head; ?>
-    
-    <meta name="description" content="">
-    
+        
   	<!-- Import Stylesheets -->
     <?php print $styles; ?>
      
@@ -22,7 +20,7 @@
 
   <body class="<?php print $classes; ?>" <?php print $attributes; ?>>
     
-    <!--[if lte IE 7]>
+    <!--[if lte IE 8]>
       <div class="chromeframe">
         You are using an <strong>outdated</strong> browser.<br/>
         Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.

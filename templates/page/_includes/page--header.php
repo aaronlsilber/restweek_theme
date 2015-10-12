@@ -1,5 +1,4 @@
 <header class="page__header" role="banner">
-
   <h1 class="site-name">
     <a href="<?php print check_url($front_page); ?>" title="<?php print check_plain($site_name); ?>">
       <span class="element-invisible"><?php print render($site_name); ?></span>
