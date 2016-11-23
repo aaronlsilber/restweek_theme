@@ -2784,6 +2784,19 @@ a {
 /* 
  * Unique
  */
+.block--hellobar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5em;
+  color: white;
+  text-align: center;
+  background: #DB4827; }
+  .block--hellobar a {
+    color: white;
+    text-decoration: underline; }
+
 .block--introduction {
   position: relative;
   background: #fff url("../img/restweek-graphic.svg") no-repeat bottom 0 right -150px; }
@@ -3017,6 +3030,9 @@ a {
 /*
  * Theme
  */
+.btn--white {
+  background: white; }
+
 /* 
  * Unique
  */
