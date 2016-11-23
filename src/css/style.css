@@ -2800,8 +2800,8 @@ a {
     color: white;
     text-decoration: underline; }
   .block--hellobar .btn {
-    background: #DB4827;
-    color: white;
+    color: #DB4827;
+    background: white;
     text-decoration: none; }
 
 .block--introduction {
