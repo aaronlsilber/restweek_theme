@@ -716,15 +716,15 @@ textarea:focus {
  * and over in your markup.
  */
 .cf, .gw,
-.grid-wrapper, .nav {
+.grid-wrapper, .nav, .list--steps li, .list--social {
   zoom: 1; }
   .cf:before, .gw:before,
-  .grid-wrapper:before, .nav:before, .cf:after, .gw:after,
-  .grid-wrapper:after, .nav:after {
+  .grid-wrapper:before, .nav:before, .list--steps li:before, .list--social:before, .cf:after, .gw:after,
+  .grid-wrapper:after, .nav:after, .list--steps li:after, .list--social:after {
     content: " ";
     display: table; }
   .cf:after, .gw:after,
-  .grid-wrapper:after, .nav:after {
+  .grid-wrapper:after, .nav:after, .list--steps li:after, .list--social:after {
     clear: both; }
 
 /*------------------------------------*\
@@ -1982,7 +1982,7 @@ label,
  * Demo: jsfiddle.net/inuitcss/WS4Ge
  *
  */
-@media only screen and (max-width: 29.99em) {
+@media only screen and (max-width: 39.99em) {
   /**
   * Whole
   */
@@ -2081,7 +2081,7 @@ label,
 
   .palm-eleven-twelfths {
     width: 91.666%; } }
-@media only screen and (min-width: 30em) and (max-width: 39.99em) {
+@media only screen and (min-width: 40em) and (max-width: 59.99em) {
   /**
   * Whole
   */
@@ -2180,7 +2180,7 @@ label,
 
   .lap-eleven-twelfths {
     width: 91.666%; } }
-@media only screen and (max-width: 39.99em) {
+@media only screen and (max-width: 59.99em) {
   /**
   * Whole
   */
@@ -2279,7 +2279,7 @@ label,
 
   .portable-eleven-twelfths {
     width: 91.666%; } }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 60em) {
   /**
   * Whole
   */
@@ -2383,7 +2383,7 @@ label,
  * `_vars.scss` then you now have access to the following class available to
  * accomodate much larger screen resolutions.
  */
-@media only screen and (min-width: 50em) {
+@media only screen and (min-width: 70em) {
   /**
   * Whole
   */
@@ -2599,19 +2599,19 @@ label,
   position: absolute;
   left: -9999px; }
 
-@media only screen and (max-width: 29.99em) {
+@media only screen and (max-width: 39.99em) {
   .hide--palm {
     position: absolute;
     left: -9999px; } }
-@media only screen and (min-width: 30em) and (max-width: 39.99em) {
+@media only screen and (min-width: 40em) and (max-width: 59.99em) {
   .hide--lap {
     position: absolute;
     left: -9999px; } }
-@media only screen and (max-width: 39.99em) {
+@media only screen and (max-width: 59.99em) {
   .hide--portable {
     position: absolute;
     left: -9999px; } }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 60em) {
   .hide--desk {
     position: absolute;
     left: -9999px; } }
@@ -2633,13 +2633,32 @@ label,
 /* 
  * Base
  */
+body {
+  color: #59595B;
+  font-family: "jaf-facitweb-n3", "jaf-facitweb", Verdana, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300; }
+
 /* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "aviano-sans-n4", "aviano-sans", Verdana, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400; }
+
+a {
+  color: #DB4827; }
+
 /* 
  * Theme
  */
 /* All Caps Text */
 .allcaps {
   text-transform: uppercase; }
+
+.text--blenny {
+  font-family: "blenny-n9", "blenny", Verdana, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 900; }
 
 /* 
  * Unique
@@ -2662,10 +2681,10 @@ label,
   margin: 0 auto; }
 
 .l-contain {
-  max-width: 50em;
+  max-width: 70em;
   margin: 0 auto;
   padding: 0 12px; }
-  @media only screen and (min-width: 30em) {
+  @media only screen and (min-width: 40em) {
     .l-contain {
       padding: 0 24px; } }
 
@@ -2673,27 +2692,27 @@ label,
   display: block;
   width: 100%; }
 
-@media only screen and (max-width: 29.99em) {
+@media only screen and (max-width: 39.99em) {
   .hide--palm {
     display: none;
     visibility: hidden; } }
 
-@media only screen and (min-width: 30em) and (max-width: 39.99em) {
+@media only screen and (min-width: 40em) and (max-width: 59.99em) {
   .hide--lap {
     display: none;
     visibility: hidden; } }
 
-@media only screen and (max-width: 39.99em) {
+@media only screen and (max-width: 59.99em) {
   .hide--portable {
     display: none;
     visibility: hidden; } }
 
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 60em) {
   .hide--desk {
     display: none;
     visibility: hidden; } }
 
-@media only screen and (min-width: 50em) {
+@media only screen and (min-width: 70em) {
   .hide--desk-wide {
     display: none;
     visibility: hidden; } }
@@ -2701,6 +2720,61 @@ label,
 /* 
  * Low-level structural containers
  */
+/*
+ * Objects
+ */
+.meal {
+  padding: 4em;
+  background: #fff;
+  text-align: center; }
+  @media only screen and (min-width: 40em) {
+    .meal {
+      padding: 4em; } }
+
+.meal--card {
+  box-shadow: inset 0 0 0px 20px #fff, inset 0 0 0px 22px #DB4827; }
+  @media only screen and (min-width: 60em) {
+    .meal--card {
+      padding: 6em 12em;
+      box-shadow: inset 0 0 0px 20px #fff, inset 0 0 0px 22px #DB4827; } }
+  .meal--card .restaurant {
+    margin-bottom: 4em; }
+  .meal--card .restaurant__name {
+    margin-bottom: 0.5em;
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 1; }
+    @media only screen and (min-width: 60em) {
+      .meal--card .restaurant__name {
+        font-size: 42px;
+        font-size: 2.625rem;
+        line-height: 1; } }
+  .meal--card .meal__course {
+    margin-bottom: 2em; }
+    .meal--card .meal__course .label-above {
+      margin-bottom: 0.1em;
+      color: #DB4827;
+      font-size: 28px;
+      font-size: 1.75rem;
+      line-height: 1.2; }
+    .meal--card .meal__course ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      list-style-image: none; }
+    .meal--card .meal__course li:nth-of-type(n+2)::before {
+      content: 'or';
+      display: block; }
+
+.meal .restaurant .restaurant__phone,
+.meal .restaurant .restaurant__address {
+  display: inline-block; }
+  .meal .restaurant .restaurant__phone a,
+  .meal .restaurant .restaurant__address a {
+    color: #DB4827; }
+.meal .restaurant .restaurant__phone {
+  margin-right: 1em; }
+
 /* 
  * Base
  */
@@ -2710,10 +2784,159 @@ label,
 /* 
  * Unique
  */
+.block--introduction {
+  position: relative;
+  background: #fff url("../img/restweek-graphic.svg") no-repeat bottom 0 right -150px; }
+  @media only screen and (min-width: 40em) and (max-width: 59.99em) {
+    .block--introduction {
+      background-position: bottom left -120px;
+      background-size: contain; } }
+  @media only screen and (min-width: 60em) {
+    .block--introduction {
+      min-height: 90vh;
+      background-position: bottom 120px left 50px; } }
+  .block--introduction .intro__text {
+    padding: 24px;
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 1.2; }
+    @media only screen and (min-width: 40em) and (max-width: 59.99em) {
+      .block--introduction .intro__text {
+        padding: 2em; } }
+    @media only screen and (min-width: 60em) {
+      .block--introduction .intro__text {
+        padding: 6em 2em 2em; } }
+    .block--introduction .intro__text h1 {
+      color: #DB4827;
+      font-size: 38px;
+      font-size: 2.375rem;
+      line-height: 1.2; }
+      @media only screen and (min-width: 60em) {
+        .block--introduction .intro__text h1 {
+          font-size: 52px;
+          font-size: 3.25rem;
+          line-height: 1.2; } }
+    .block--introduction .intro__text h2 {
+      color: #444444; }
+      @media only screen and (min-width: 60em) {
+        .block--introduction .intro__text h2 {
+          position: absolute;
+          bottom: 50px;
+          right: 1em;
+          font-size: 100px; } }
+  .block--introduction .intro__background {
+    height: 500px;
+    background: url("../img/bg-capitol_mono.jpg") no-repeat center;
+    background-size: cover; }
+    @media only screen and (max-width: 39.99em) {
+      .block--introduction .intro__background {
+        max-height: 50vh; } }
+    @media only screen and (min-width: 60em) {
+      .block--introduction .intro__background {
+        min-height: 90vh; } }
+
+/*
+ * Event Information
+ */
+.block--event-information {
+  position: relative;
+  padding: 24px;
+  background: #444444 url("../img/food-on-table.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff; }
+  @media only screen and (min-width: 40em) {
+    .block--event-information {
+      padding: 4em; } }
+  @media only screen and (min-width: 60em) {
+    .block--event-information .block__header {
+      width: 50%; } }
+  @media only screen and (max-width: 39.99em) {
+    .block--event-information .block__title {
+      font-size: 32px;
+      font-size: 2rem;
+      line-height: 1.2; } }
+
+.block--menus {
+  margin: 0 auto;
+  padding: 24px 12px;
+  background: url("../img/wood-planks-texture.jpg") repeat top center; }
+  @media only screen and (min-width: 40em) {
+    .block--menus {
+      padding: 4em; } }
+
+.block--call-restaurants {
+  margin: 0 auto;
+  padding: 24px;
+  background: #DB4827;
+  color: #fff; }
+  @media only screen and (min-width: 40em) {
+    .block--call-restaurants {
+      padding: 4em; } }
+  .block--call-restaurants .block__header {
+    color: #292928; }
+    .block--call-restaurants .block__header h1 {
+      font-size: 30px;
+      font-size: 1.875rem;
+      line-height: 1.2; }
+  .block--call-restaurants .quote {
+    display: block;
+    /* text-align: center; */
+    font-size: 32px;
+    line-height: 1;
+    padding: 0.5em 0; }
+  .block--call-restaurants .download img {
+    position: relative;
+    top: 0;
+    display: block;
+    vertical-align: middle;
+    transform: scale(1);
+    box-shadow: none;
+    transition: all .2s ease-in-out; }
+    .block--call-restaurants .download img:hover {
+      top: -1em;
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px 1px #52170A; }
+
+.block--social-buzz {
+  padding: 24px; }
+  @media only screen and (min-width: 40em) {
+    .block--social-buzz {
+      padding: 4em;
+      background: #fff url("../img/restweek-graphic.svg") no-repeat bottom -100px left 50px;
+      background-attachment: fixed; } }
+  .block--social-buzz .block__header h1 {
+    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 1.2; }
+
+.block--footnotes {
+  padding: 2em;
+  background: #292928;
+  color: #fff; }
+  .block--footnotes .sponsor {
+    margin-bottom: 24px;
+    vertical-align: middle;
+    text-align: center; }
+    .block--footnotes .sponsor img {
+      margin-top: 0.5em;
+      display: inline-block;
+      vertical-align: middle; }
+  .block--footnotes .social {
+    vertical-align: middle;
+    text-align: center; }
+    .block--footnotes .social .list--social {
+      margin-top: 0.5em;
+      display: inline-block;
+      vertical-align: middle; }
+
 /* 
  * Base
  */
-.list--plain {
+.list--plain,
+.list--vert-nav,
+.list--steps,
+.list--social {
   margin: 0;
   list-style-type: none; }
 
@@ -2723,6 +2946,58 @@ label,
 /* 
  * Unique
  */
+.list--vert-nav {
+  margin-bottom: 24px; }
+  @media only screen and (max-width: 39.99em) {
+    .list--vert-nav {
+      white-space: nowrap;
+      overflow-x: scroll;
+      padding-left: 1em;
+      padding-right: 1em;
+      margin-left: -1em;
+      margin-right: -1em; } }
+  .list--vert-nav li {
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 5px;
+    background: linear-gradient(to right, #292928 50%, #D0D0BA 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    padding: 1em;
+    color: #D0D0BA;
+    transition: all ease-in-out .2s; }
+    @media only screen and (min-width: 40em) {
+      .list--vert-nav li {
+        display: block;
+        margin-bottom: 0;
+        padding: 0.3em 1em; } }
+    .list--vert-nav li.is-active, .list--vert-nav li.is-active:hover {
+      color: #292928;
+      background-position: right bottom; }
+    .list--vert-nav li:hover {
+      background-position: left 10px bottom; }
+
+.list--steps {
+  counter-reset: step; }
+  .list--steps li {
+    counter-increment: step;
+    margin-bottom: 1em; }
+    .list--steps li::before {
+      content: counter(step);
+      margin: 0 0.2em 0 0;
+      float: left;
+      font-family: "blenny-n9", "blenny", Verdana, Arial, sans-serif;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 2.4em;
+      line-height: 1; }
+
+.list--social li {
+  display: inline-block;
+  margin: 0 1em; }
+  .list--social li img {
+    display: block; }
+
 /* 
  * Base
  */
@@ -2784,5 +3059,24 @@ img, img[width], img[height] {
 /* 
  * Unique
  */
+.view-menus {
+  margin: 0 auto; }
+
+.view--menus .meal-wrapper {
+  display: none;
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.5), 6px 6px 0 0 white, 7px 8px 6px 0 rgba(0, 0, 0, 0.5), 10px 12px 0 0 white; }
+  .view--menus .meal-wrapper .meal--card {
+    filter: blur(4px);
+    transition: all .2s linear; }
+  .view--menus .meal-wrapper.is-active {
+    display: block; }
+    .view--menus .meal-wrapper.is-active .meal--card {
+      filter: blur(0px); }
+
+.view--restaurants .view-header h1 {
+  color: #fff;
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.2; }
 
 /*# sourceMappingURL=style.css.map */

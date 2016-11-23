@@ -4,15 +4,20 @@
  */
 
 	body {
-		
+		color: $gray;
+		@include font('facit');
 	}
 
 	/* Headings */
 
 	h1, h2, h3, h4, h5, h6 {
-
+		@include font('aviano', 400);
 	}
 	
+	a {
+		color: $orange;
+	}
+
 /* 
  * Theme
  */
@@ -20,6 +25,10 @@
 	/* All Caps Text */
 	.allcaps {
 		text-transform: uppercase;
+	}
+
+	.text--blenny {
+		@include font('blenny');
 	}
 
 /* 

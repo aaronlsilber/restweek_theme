@@ -4,9 +4,9 @@
   </div>
 <?php endif; ?>
 
-<?php include('_includes/page--header.php'); ?>
+<?php //include('_includes/page--header.php'); ?>
 
-<div class="page__body" role="main">
+<main class="page__body" role="main">
 
   <?php if ($action_links): ?>
   <ul class="action-links">
@@ -23,6 +23,6 @@
 
   <?php if (!empty($page['content'])) print render($page['content']) ?>
     
-</div>
+</main>
 
 <?php include('_includes/page--footer.php'); ?>

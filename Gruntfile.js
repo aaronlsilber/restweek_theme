@@ -24,8 +24,8 @@ module.exports = function( grunt ) {
       js: {
         files: {
           'src/js/scripts.min.js': [
-            //'src/components/jquery/dist/jquery.min.js',
-            'src/assets/js/scripts.js'
+            'src/components/matchHeight/jquery.matchHeight-min.js',
+            'src/js/scripts.js'
           ]
         }
       }
@@ -74,6 +74,15 @@ module.exports = function( grunt ) {
       },
     },
 
+    cssmin: {
+      target: {
+        files: [{
+          src: ['src/css/style.css'],
+          dest: 'src/css/style.min.css'
+        }]
+      }
+    },
+
     open: {
       server: {
         url: 'http://localhost:<%= connect.options.port %>'
@@ -81,15 +90,6 @@ module.exports = function( grunt ) {
     },
 
     sass: {
-      dist: {
-        options: {
-          style: 'compressed',
-          sourcemap: 'none'
-        },
-        files: {
-          'src/css/style.min.css': 'src/css/style.scss'
-        }
-      },
       dev: {
         src: ['src/css/style.scss'],
         dest: 'src/css/style.css',
@@ -99,7 +99,7 @@ module.exports = function( grunt ) {
     watch: {
     	sass: {
     		files: ['src/css/{,*/}*.scss'],
-    		tasks: ['sass:dev'],
+    		tasks: ['sass', 'cssmin'],
     	},
       js: {
         files: ['src/js/{,*/}*.js'],
@@ -121,13 +121,12 @@ module.exports = function( grunt ) {
   grunt.registerTask(
     'build',
     'Compiles all of the assets and copied the files to the dist directory.',
-    ['sass:dist', 'concat', 'uglify', 'clean', 'copy']
+    ['sass', 'cssmin', 'concat', 'uglify', 'clean', 'copy']
   );
 
   grunt.registerTask('server', function() {
     grunt.task.run([
       'connect:livereload',
-      'open',
       'watch'
     ]);
   });

@@ -3,8 +3,22 @@
   $font-style:  $style;
   $fallbacks: sans-serif;
 
-  @if ($family == 'proxima-nova') {
-    $family: 'proxima-nova';
+  @if ($family == 'aviano') {
+    $family: 'aviano-sans';
+    $fallbacks: Verdana, Arial, sans-serif;
+  }
+
+  @if ($family == 'blenny') {
+    $family: 'blenny';
+    $weight: 900;
+    $font-weight: 900;
+    $fallbacks: Verdana, Arial, sans-serif;
+  }
+
+  @if ($family == 'facit') {
+    $family: 'jaf-facitweb';
+    $weight: 300;
+    $font-weight: 300;
     $fallbacks: Verdana, Arial, sans-serif;
   }
  

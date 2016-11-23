@@ -67,3 +67,100 @@
 	body {
 		
 	}
+
+	.frame {
+
+	}
+
+/*
+ * Objects
+ */
+
+	.meal {	
+    padding: 4em;
+    background: $white;
+
+    text-align: center;
+
+    @include media-query(lap-and-up) {
+    	padding: 4em;
+    }
+	}
+
+		.meal__course {
+
+			.label-above {
+
+			}
+		}
+
+		.meal--card {
+
+			box-shadow:
+				inset 0 0 0px 20px $white,
+				inset 0 0 0px 22px $orange;
+
+			@include media-query(desk) {
+				padding: 6em 12em;
+				box-shadow:
+					inset 0 0 0px 20px $white,
+					inset 0 0 0px 22px $orange;
+			}
+
+			.restaurant {
+				margin-bottom: 4em;
+			}
+
+			.restaurant__name {
+				margin-bottom: 0.5em;
+				@include font-size(28px, 1);
+
+				@include media-query(desk) {
+					@include font-size(42px, 1);
+				}
+			}
+
+			.meal__course {
+				margin-bottom: 2em;
+
+				.label-above {
+					margin-bottom: 0.1em;
+					color: $orange;
+					@include font-size(28px, 1.2);
+				}
+
+				ul {
+					margin: 0;
+					padding: 0;
+					list-style-type: none;
+					list-style-image: none;
+				}
+
+				li {
+
+					&:nth-of-type(n+2)::before {
+						content: 'or';
+						display: block;
+					}
+				}
+			}
+		}
+
+	.restaurant {
+
+		.meal & {
+			
+			.restaurant__phone,
+			.restaurant__address {
+				display: inline-block;
+
+				a {
+					color: $orange;
+				}
+			}
+
+			.restaurant__phone {
+				margin-right: 1em;
+			}
+		}
+	}

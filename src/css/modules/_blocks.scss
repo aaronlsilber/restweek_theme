@@ -14,3 +14,266 @@
 /* 
  * Unique
  */
+
+	.block--introduction {
+		position: relative;
+		background: $white url('../img/restweek-graphic.svg') no-repeat bottom 0 right -150px;
+
+		@include media-query(lap) {
+			background-position: bottom left -120px;
+			background-size: contain;
+		}
+
+		@include media-query(desk) {
+			min-height: 90vh;
+			background-position: bottom 120px left 50px;
+		}
+
+		.intro__text {
+			padding: $gutter-width;
+			@include font-size(28px, 1.2);
+
+			@include media-query(lap) {
+				padding: 2em;
+			}
+
+			@include media-query(desk) {
+				padding: 6em 2em 2em;
+			}
+
+			h1 {
+				color: $orange;
+				@include font-size(38px, 1.2);
+
+				@include media-query(desk) {
+					@include font-size(52px, 1.2);
+				}
+			}
+
+			h2 {
+				color: $gray-dark;
+
+				@include media-query(desk) {
+					position: absolute;
+					bottom: 50px;
+					right: 1em;
+					font-size: 100px;
+				}
+			}
+		}
+
+		.intro__background {
+			height: 500px;
+			background: url('../img/bg-capitol_mono.jpg') no-repeat center;
+			background-size: cover;
+
+			@include media-query(palm) {
+				max-height: 50vh;
+			}
+
+			@include media-query(desk) {
+				min-height: 90vh;
+			}
+		}
+
+	}
+
+
+
+	/*
+	 * Event Information
+	 */
+	
+	.block--event-information {
+		position: relative;
+		padding: $gutter-width;
+		
+		background: $gray-dark url('../img/food-on-table.jpg') no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+
+		color: $white;
+
+			@include media-query(lap) {
+				
+			}
+
+			@include media-query(lap-and-up) {
+				padding: 4em;
+			}
+
+			.block__header {
+
+				@include media-query(desk) {
+					width: 50%;
+				}
+			}
+
+				.block__title {
+
+					@include media-query(palm) {
+						@include font-size(32px, 1.2);
+					}
+				}
+
+			.block__content {
+
+				@include media-query(lap-and-up) {
+
+				}
+
+				@include media-query(desk) {
+					
+				}
+			}
+
+				.list--steps {
+
+					@include media-query(lap-and-up) {
+						// margin-left: -$gutter-width;
+					}
+
+					li {
+						
+						@include media-query(lap-and-up) {
+							// width: 33%;
+							// float: left;
+							// padding-left: $gutter-width;
+						}
+
+					}
+				}
+	}
+
+
+	.block--menus {
+		margin: 0 auto;
+		padding: $gutter-width $gutter-width/2;
+		background: url('../img/wood-planks-texture.jpg') repeat top center;
+
+		@include media-query(lap-and-up) {
+			padding: 4em;
+		}
+
+		@include media-query(desk) {
+			
+		}
+
+		.block__content {
+
+		}
+	}
+
+	.block--call-restaurants {
+		margin: 0 auto;
+		padding: $gutter-width;
+		background: $orange;
+		color: $white;
+
+		@include media-query(lap-and-up) {
+			padding: 4em;
+		}
+
+		@include media-query(desk) {
+			
+		}
+
+		.block__header {
+			color: #292928;
+
+			h1 {
+				@include font-size(30px, 1.2);
+			}
+		}
+
+		.quote {
+			display: block;
+	    /* text-align: center; */
+	    font-size: 32px;
+	    line-height: 1;
+	    padding: 0.5em 0;
+		}
+
+		.download {
+
+			img {
+				position: relative;
+				top: 0;
+				display: block;
+				vertical-align: middle;
+
+				transform: scale(1);
+				box-shadow: none;
+				transition: all .2s ease-in-out;
+
+				&:hover {
+					top: -1em;
+					transform: scale(1.05);
+					box-shadow: 0 4px 10px 1px #52170A;
+				}				
+			}
+	
+		}
+	}
+
+	.block--social-buzz {
+		padding: $gutter-width;
+
+		@include media-query(lap-and-up) {
+			padding: 4em;
+			
+			background: $white url('../img/restweek-graphic.svg') no-repeat bottom -100px left 50px;
+			background-attachment: fixed;
+		}
+
+		.block__header {
+
+			h1 {
+    		@include font-size(30px, 1.2);
+			}
+		}
+	}
+
+
+	.block--footnotes {
+		padding: 2em;
+
+		background: #292928;
+		color: $white;
+
+		@include media-query(lap-and-up) {
+			
+		}
+
+		.block__title {
+
+		}
+
+		.sponsor {
+			margin-bottom: $gutter-width;
+
+			vertical-align: middle;
+			text-align: center;
+
+			img {
+				margin-top: 0.5em;
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+
+		.social {
+			vertical-align: middle;
+			text-align: center;
+
+			.list--social {
+				margin-top: 0.5em;
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+
+			.social__tagline {
+				
+			}
+	}

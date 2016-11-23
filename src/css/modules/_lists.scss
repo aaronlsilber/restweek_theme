@@ -16,3 +16,87 @@
 /* 
  * Unique
  */
+
+	.list--vert-nav {
+		@extend %list--plain;
+		margin-bottom: $gutter-width;
+
+		@include media-query(palm) {
+			white-space: nowrap;
+			overflow-x: scroll;
+			padding-left: 1em;
+			padding-right: 1em;
+			margin-left: -1em;
+			margin-right: -1em;
+		}
+
+		li {
+			cursor: pointer;
+			display: inline-block;
+			margin-bottom: 5px;
+
+	    background: linear-gradient(to right, #292928 50%, #D0D0BA 50%);
+	    background-size: 200% 100%;
+	    background-position: left bottom;
+
+	    padding: 1em;
+	    color: #D0D0BA;
+
+	    transition: all ease-in-out .2s;
+
+	    @include media-query(lap-and-up) {
+	    	display: block;
+	    	margin-bottom: 0;
+	    	padding: 0.3em 1em;
+	    }
+
+
+			&.is-active,
+			&.is-active:hover {
+				color: #292928;
+				background-position: right bottom;
+			}
+
+			&:hover {
+				background-position: left 10px bottom;
+			}
+		}
+	}
+
+	.list--steps {
+		@extend %list--plain;
+		counter-reset: step;
+
+		li {
+			@extend .cf;
+			counter-increment: step;
+
+			margin-bottom: 1em;
+			
+			&::before {
+				content: counter(step);
+
+				margin: 0 0.2em 0 0;
+				float: left;
+
+				@include font('blenny');
+				font-size: 2.4em;
+				line-height: 1;
+			}
+		}
+	}
+
+
+	.list--social {
+		@extend .cf;
+		@extend %list--plain;
+
+		li {
+			display: inline-block;
+			margin: 0 1em;
+
+			img {
+				display: block;
+			}
+		}
+	}

@@ -1,0 +1,24 @@
+name = Charleston Restaurant Week 2016
+description = Theme for 2016
+core = 7.x
+engine = phptemplate
+
+screenshot = dist/img/screenshot.png
+
+;Stylesheets
+stylesheets[all][] = src/css/style.min.css
+
+;Libraries
+scripts[] = src/components/modernizr/modernizr.min.js
+
+;Plugins
+plugins[panels][layouts] = panels_layouts
+
+;Scripts
+scripts[] = src/js/scripts.min.js
+
+;Regions
+regions[header]					= Header
+regions[content]				= Content
+regions[sidebar]  				= Sidebar
+regions[footer]					= Footer

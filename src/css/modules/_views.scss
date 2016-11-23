@@ -10,3 +10,47 @@
 /* 
  * Unique
  */
+
+.view-menus {
+	margin: 0 auto;
+}
+
+.view--menus {
+
+	.view-content {
+
+	}
+
+	.meal-wrapper {
+		display: none;
+		box-shadow: 
+			2px 2px 6px 0 rgba(0,0,0,0.5),
+			6px 6px 0 0 white,
+			7px 8px 6px 0 rgba(0,0,0,0.5),
+			10px 12px 0 0 white;
+
+		.meal--card {
+			filter: blur(4px);
+			transition: all .2s linear;
+		}
+
+		&.is-active {
+			display: block;
+
+			.meal--card {
+				filter: blur(0px);
+			}
+		}
+	}
+}
+
+.view--restaurants {
+
+	.view-header {
+
+		h1 {
+			color: $white;
+			@include font-size(30px, 1.2);
+		}
+	}
+}

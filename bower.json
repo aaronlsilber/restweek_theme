@@ -14,7 +14,8 @@
     "tests"
   ],
   "dependencies": {
-    "modernizr": "~2.8.3"
+    "modernizr": "~2.8.3",
+    "FitText.js": "~1.2.0"
   },
   "devDependencies": {
     "bourbon": "~4.2.3"

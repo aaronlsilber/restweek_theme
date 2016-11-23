@@ -63,9 +63,9 @@ $responsive-pull:   false!default;
 /**
  * Tell inuit.css when breakpoints start.
  */
-$lap-start:         30em!default;
-$desk-start:        40em!default;
-$desk-wide-start: 	50em!default;
+$lap-start:         40em!default;
+$desk-start:        60em!default;
+$desk-wide-start: 	70em!default;
 
 $gutter-width: 		$base-line-height!default;
 $max-width: 		$desk-wide-start!default;
@@ -116,7 +116,9 @@ $close-quote:   null;
  */
 
 $white: 				#fff;
-
+$gray: 					#59595B;
+$gray-dark: 		#444444;
+$orange: 				#DB4827;
 
 /**
  * inuit.css will work these next ones out for you.

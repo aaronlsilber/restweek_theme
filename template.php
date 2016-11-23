@@ -4,7 +4,7 @@
  * HTML
  */
 
-  function falkor_preprocess_html(&$vars) {
+  function restweek16_preprocess_html(&$vars) {
 
     // Optionally, drop the site slogan from the page <title>
     if(drupal_is_front_page()) {
@@ -12,7 +12,7 @@
     }
   }
 
-  function falkor_process_html(&$vars) {
+  function restweek16_process_html(&$vars) {
     global $base_path;
     global $theme_path;
     
@@ -29,7 +29,7 @@
  * Page
  */
   
-  function falkor_preprocess_page(&$vars) {
+  function restweek16_preprocess_page(&$vars) {
     global $theme_path;
 
     // If tabs exist, add some classes to use in templating
@@ -45,10 +45,10 @@
  * Regions
  */
   
-  function falkor_preprocess_region(&$vars) {
+  function restweek16_preprocess_region(&$vars) {
 
     /* Getting the human-readable name of a region for use in templates */
-    $regions_list = system_region_list('falkor', $show = REGIONS_ALL);
+    $regions_list = system_region_list('restweek16', $show = REGIONS_ALL);
     $vars['region_name'] = $regions_list[$vars['region']];
 
   }
@@ -62,7 +62,7 @@
  * Blocks
  */
   
-  function falkor_preprocess_block(&$vars, $hook) {
+  function restweek16_preprocess_block(&$vars, $hook) {
 
     switch($vars['block_html_id']) {
       case 'block-system-main':
@@ -88,7 +88,7 @@
  * Nodes
  */
 
-  function falkor_preprocess_node($vars) {
+  function restweek16_preprocess_node($vars) {
     global $theme_path;
     $node_type = $vars['type'];
 
@@ -111,11 +111,11 @@
  * Menus
  */
 
-  function falkor_menu_tree__main_menu(&$vars) {
+  function restweek16_menu_tree__main_menu(&$vars) {
     return '<ul class="nav">' . $vars['tree'] . '</ul>';
   }
 
-  function falkor_menu_link($vars) {
+  function restweek16_menu_link($vars) {
     $element = $vars['element'];
 
     $sub_menu = $element['#below'] ? drupal_render($element['#below']) : '';
