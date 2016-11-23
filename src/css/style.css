@@ -2788,11 +2788,14 @@ a {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 20;
   width: 100%;
   padding: 0.5em;
   color: white;
   text-align: center;
   background: #DB4827; }
+  body.logged-in .block--hellobar {
+    position: relative; }
   .block--hellobar a {
     color: white;
     text-decoration: underline; }
